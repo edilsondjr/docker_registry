@@ -20,11 +20,7 @@ docker-compose -f registry.yml up
 ```
 Stop:
 ```sh
-<<<<<<< HEAD:README.MD
 docker-compose -f registry.yml down
-=======
-docker-compose up -d
->>>>>>> bd7c0a8cf27c80c94188095ceac59af792ee5f78:README.md
 ```
 
 #HTTPS

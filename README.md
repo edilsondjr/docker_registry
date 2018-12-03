@@ -1,6 +1,7 @@
 # Docker Registry and Registry UI
 
 Docker version used to test and run: 18.09.0
+
 For use with other docker versions, please change the version on first line, according to compatibilty matrix on this link:
 https://docs.docker.com/compose/compose-file/#compose-and-docker-compatibility-matrix
 

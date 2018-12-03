@@ -12,7 +12,7 @@ This is a docker-compose file that runs two containers
 
 To run, clone this repo and run:
 
-# HTTP
+## HTTP
 
 Start:
 ```sh
@@ -23,7 +23,7 @@ Stop:
 docker-compose -f registry.yml down
 ```
 
-# HTTPS
+## HTTPS
 
 Start:
 ```sh

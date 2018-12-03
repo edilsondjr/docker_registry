@@ -1,0 +1,36 @@
+version: "3.7"
+services:
+  registry:
+    image: registry:2
+    container_name: registry
+    volumes: 
+    - type: volume
+      source: registry
+      target: /var/lib/registry
+    networks: 
+      - registry
+    environment:
+      - REGISTRY_PROXY_REMOTEURL=https://registry-1.docker.io
+    ports:
+      - "5000:5000"
+    restart: unless-stopped 
+
+  registry-ui:
+    image: konradkleine/docker-registry-frontend:v2
+    container_name: registry-ui
+    depends_on:
+      - registry
+    networks: 
+      - registry
+    environment:
+      - ENV_DOCKER_REGISTRY_HOST=registry
+      - ENV_DOCKER_REGISTRY_PORT=5000
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    
+volumes:
+  registry:
+
+networks:
+  registry:

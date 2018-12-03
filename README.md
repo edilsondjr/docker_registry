@@ -12,6 +12,6 @@ This is a docker-compose file that runs two containers
 Clone this repo and run:
 
 ```sh
-docker-compose up
+docker-compose up -d
 ```
 
